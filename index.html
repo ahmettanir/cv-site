@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmet Tanır - CV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </div>
+
+  <div class="container">
+    <header class="fade-in compact-header">
+      <div class="header-flex">
+        <img src="profil.png" alt="Profile Photo" class="profile-photo" />
+        <div class="header-text">
+          <h1>Ahmet Tanır</h1>
+          <p>Computer Engineering Student</p>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#iletisimformu">Contact Form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about" class="fade-in">
+        <h2>About</h2>
+        <p>
+          I am a Computer Engineering student with a particular interest in electronic systems, software development, and hardware design.
+          Throughout my university education, I have developed basic projects using languages such as C, C#, and Java, as well as web technologies like HTML, CSS, and JavaScript.
+          My goal is to improve myself in the field of software and become a proficient software developer in the future. I am especially interested in enhancing my skills in back-end development, database management, and algorithm design.
+        </p>
+      </section>
+
+      <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p><i class="fa-solid fa-envelope"></i> t.tanirahmet@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +90 538 022 8010</p>
+        <p><i class="fa-solid fa-location-dot"></i> Karabük, Türkiye</p>
+      </section>
+
+      <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <p><strong>Karabük Üniversitesi</strong> – Computer Engineering (Continuing)</p>
+        <p><strong>Sakarya Uygulamalı Bilimler Üniversitesi</strong> – Electronics Technology</p>
+      </section>
+
+      <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript, C, C#, WPF</li>
+          <li>My SQL, Firebase</li>
+          <li>Teamwork, problem solving, basic project management</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <p><strong>Productivity Tracking System</strong><br>Software development that monitors production efficiency within the scope of the internship.</p>
+        <p><strong>Smart Home Mini Project</strong><br>Home automation prototype with Arduino-based sensors.</p>
+      </section>
+
+      <section id="interests" class="fade-in">
+        <h2>Interests</h2>
+        <ul>
+          <li>Artificial intelligence and microchip design</li>
+        </ul>
+      </section>
+
+      <section id="experiences" class="fade-in">
+        <h2>Experiences</h2>
+        <p><strong>Trainee Electronics Technician - MUSELLIMOGLU DEMIRCELIK (2020)</strong>
+        <ul>
+          <li>I helped with processes related to malfunction and maintenance of electronic circuit boards.</li>
+          <li>I took part in Arduino projects</li>
+        </ul>
+        <p><strong>Software Developer - OFT Software (2020 - 2021)</strong>
+          <ul>
+            <li>I took part in software testing processes with team work.</li>
+            <li>I took part in a software project being developed to measure productivity in factories.</li>
+          </ul>
+      </section>
+
+      <section id="iletisimformu" class="fade-in">
+        <h2>Contact form</h2>
+        <form id="iletisimForm">
+          <input type="text" placeholder="Name" required><br>
+          <input type="email" placeholder="Email" required><br>
+          <textarea placeholder="Your message" required></textarea><br>
+          <button type="submit">Send</button>
+        </form>
+        <p id="formSonuc"></p>
+      </section>
+    </main>
+
+    <footer class="fade-in">
+      <p>&copy; 2025 Ahmet Tanır</p>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById("theme-toggle");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      btn.textContent = document.body.classList.contains("light-mode")
+        ? "🌙 Dark Mode"
+        : "☀️ Bright Mode";
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    document.getElementById("iletisimForm")?.addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("formSonuc").textContent = "Your message has been sent (I think)";
+    });
+  </script>
+</body>
+</html>
