@@ -1,177 +1,105 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-  scroll-behavior: smooth;
-}
-
-.top-bar {
-  background-color: #2a2a2a;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#theme-toggle {
-  background-color: #ff914d;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-#theme-toggle:hover {
-  background-color: #cc6d3d;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-header.compact-header {
-  background: linear-gradient(45deg, #ff914d, #cc6d3d);
-  color: #fff;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-.profile-photo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-}
-
-.header-text h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-
-.header-text p {
-  margin: 4px 0 0 0;
-  font-size: 1em;
-  color: #eee;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  background-color: #222;
-  border-radius: 8px;
-  margin: 10px 0;
-}
-
-nav ul li {
-  margin: 8px;
-}
-
-nav ul li a {
-  color: #ff914d;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #ff914d;
-  color: black;
-}
-
-section {
-  background-color: #2a2a2a;
-  margin-top: 20px;
-  padding: 20px;
-  border-left: 5px solid #ff914d;
-  border-radius: 8px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-section h2 {
-  color: #ff914d;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-i {
-  margin-right: 8px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #999;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.7s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-color: #f1f5f9;
+    --accent-color: #38bdf8;
+    --sidebar-bg: #1e293b;
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 .light-mode {
-  background-color: #f5f5f5;
-  color: #1a1a1a;
+    --bg-color: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-color: #0f172a;
+    --accent-color: #0284c7;
+    --sidebar-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
 }
 
-.light-mode section {
-  background-color: #fff;
-  color: #1a1a1a;
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-.light-mode nav ul {
-  background-color: #ddd;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    transition: background 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-  }
-
-  section {
-    padding: 15px;
-  }
-
-  .header-flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #iletisimForm {
-  max-width: 600px;
-  margin: auto;
+/* Arka Plan Blobları */
+.background-blobs {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    background: radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 40%);
 }
+
+/* Sidebar Tasarımı */
+.sidebar {
+    width: 280px; height: 100vh; background: var(--sidebar-bg);
+    padding: 2rem; position: fixed; display: flex; flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1); z-index: 100;
+}
+
+.profile-img {
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 3px solid var(--accent-color); margin-bottom: 1rem; object-fit: cover;
+}
+
+.student-id { font-size: 0.8rem; opacity: 0.7; }
+
+.nav-links { list-style: none; flex-grow: 1; margin-top: 2rem; }
+.nav-links li { margin-bottom: 0.8rem; }
+.nav-links a {
+    color: var(--text-color); text-decoration: none;
+    display: flex; align-items: center; gap: 12px;
+    padding: 0.8rem; border-radius: 10px; transition: 0.3s;
+}
+.nav-links a:hover { background: var(--accent-color); color: white; }
+
+/* İçerik Alanı */
+.content { margin-left: 280px; padding: 3rem; width: 100%; max-width: 1100px; }
+
+.glass-card {
+    background: var(--card-bg); backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color); border-radius: 20px;
+    padding: 2rem; margin-bottom: 2rem;
+}
+
+.section-title {
+    color: var(--accent-color); margin-bottom: 1.5rem;
+    font-size: 1.5rem; border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+.skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+    background: rgba(56, 189, 248, 0.15); padding: 6px 14px;
+    border-radius: 15px; font-weight: 600; font-size: 0.85rem;
+}
+
+/* Form */
+.modern-form input, .modern-form textarea {
+    width: 100%; padding: 12px; margin-bottom: 1rem;
+    border-radius: 8px; border: 1px solid var(--border-color);
+    background: rgba(0,0,0,0.05); color: var(--text-color);
+}
+
+.submit-btn {
+    background: var(--accent-color); color: white; border: none;
+    padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold;
+}
+
+.theme-btn {
+    background: none; border: 1px solid var(--accent-color);
+    color: var(--text-color); padding: 10px; border-radius: 8px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .content { margin-left: 0; padding: 1.5rem; }
 }
