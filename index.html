@@ -16,7 +16,7 @@
         <div class="profile-section">
             <img src="profil.png" alt="Ahmet Tanır" class="profile-img">
             <h3>Ahmet Tanır</h3>
-            <span class="student-id">No: 2110206077</span>
+            <span class="student-id">Student No: 2110206077</span>
         </div>
         <ul class="nav-links">
             <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
@@ -35,17 +35,17 @@
         <section id="about" class="glass-card">
             <h2 class="section-title">About Me</h2>
             <p>
-                I am a Computer Engineering student at <strong>Karabük University</strong>. 
-                I have a strong interest in software development, web architecture, and electronic systems. 
-                Currently, I am focusing on back-end development and database management to build scalable applications.
+                I am a Computer Engineering student at <strong>Karabük University</strong> (3rd Year, 2nd Semester). 
+                I have a deep interest in software development, web architecture, and electronic systems. 
+                I focus on creating efficient back-end systems and managing database structures using modern technologies.
             </p>
         </section>
 
         <section id="education" class="glass-card">
             <h2 class="section-title">Education</h2>
-            <div class="timeline-item">
+            <div class="timeline-item" style="margin-bottom: 1rem;">
                 <h4>Computer Engineering</h4>
-                <p>Karabük University (3rd Year, 2nd Semester)</p>
+                <p>Karabük University (Continuing)</p>
             </div>
             <div class="timeline-item">
                 <h4>Electronics Technology</h4>
@@ -59,8 +59,9 @@
                 <span class="skill-tag">HTML5 / CSS3</span>
                 <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">C# / WPF</span>
-                <span class="skill-tag">PHP / SQL</span>
-                <span class="skill-tag">Arduino / Electronics</span>
+                <span class="skill-tag">PHP / MySQL</span>
+                <span class="skill-tag">C / Java</span>
+                <span class="skill-tag">Arduino / Firebase</span>
             </div>
         </section>
 
@@ -68,43 +69,55 @@
             <h2 class="section-title">Projects</h2>
             <div class="project-box">
                 <h4><i class="fas fa-hotel"></i> Hotel Reservation System</h4>
-                <p>A web-based project using PHP and MySQL for room rentals and dashboard management.</p>
+                <p>A web-based system developed with PHP and MySQL for room rentals and admin dashboard management.</p>
             </div>
             <div class="project-box">
-                <h4><i class="fas fa-home"></i> Smart Home Mini Project</h4>
-                <p>Automation prototype developed with Arduino-based sensors.</p>
+                <h4><i class="fas fa-microchip"></i> Smart Home Prototype</h4>
+                <p>An automation project using Arduino-based sensors for home control systems.</p>
             </div>
         </section>
 
         <section id="experiences" class="glass-card">
             <h2 class="section-title">Experience</h2>
-            <div class="exp-item">
+            
+            <div class="exp-item" style="margin-bottom: 1.5rem;">
                 <h4>Software Developer Intern - OFT Software</h4>
+                <span class="exp-date" style="font-size: 0.85rem; opacity: 0.7;">2020 - 2021</span>
                 <ul>
-                    <li>Worked on productivity tracking systems for factories.</li>
-                    <li>Participated in software testing and team collaborations.</li>
+                    <li>Participated in software testing processes within a team environment.</li>
+                    <li>Contributed to a software project monitoring factory productivity.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <h4>Trainee Electronics Technician - MUSELLIMOGLU DEMIRCELIK</h4>
+                <span class="exp-date" style="font-size: 0.85rem; opacity: 0.7;">2020</span>
+                <ul>
+                    <li>Assisted in maintenance and repair of electronic circuit boards.</li>
+                    <li>Developed and implemented Arduino-based automation solutions.</li>
                 </ul>
             </div>
         </section>
 
         <section id="contact" class="glass-card">
             <h2 class="section-title">Contact</h2>
-            <div class="contact-details">
+            <div class="contact-details" style="margin-bottom: 1.5rem;">
                 <p><i class="fas fa-envelope"></i> t.tanirahmet@gmail.com</p>
                 <p><i class="fas fa-phone"></i> +90 538 022 8010</p>
                 <p><i class="fas fa-location-dot"></i> Karabük, Türkiye</p>
             </div>
+            
             <form id="contactForm" class="modern-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
                 <textarea placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
-            <p id="formStatus"></p>
+            <p id="formStatus" style="margin-top: 10px; font-weight: 600;"></p>
         </section>
 
-        <footer class="footer">
-            <p>&copy; 2026 Ahmet Tanır | Student ID: 2110206077</p>
+        <footer class="footer" style="text-align: center; margin-top: 2rem; padding-bottom: 2rem; opacity: 0.6; font-size: 0.9rem;">
+            <p>&copy; 2026 Ahmet Tanır | Karabük University | ID: 2110206077</p>
         </footer>
     </main>
 
