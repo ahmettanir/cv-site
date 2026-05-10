@@ -1,137 +1,113 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmet Tanır - CV</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Tanır | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="top-bar">
-    <button id="theme-toggle">🌙 Dark Mode</button>
-  </div>
+<body class="dark-mode">
 
-  <div class="container">
-    <header class="fade-in compact-header">
-      <div class="header-flex">
-        <img src="profil.png" alt="Profile Photo" class="profile-photo" />
-        <div class="header-text">
-          <h1>Ahmet Tanır</h1>
-          <p>Computer Engineering Student</p>
+    <div class="background-blobs"></div>
+
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="profil.png" alt="Ahmet Tanır" class="profile-img">
+            <h3>Ahmet Tanır</h3>
+            <span class="student-id">No: 2110206077</span>
         </div>
-      </div>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#experiences">Experiences</a></li>
-        <li><a href="#iletisimformu">Contact Form</a></li>
-      </ul>
+        <ul class="nav-links">
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#experiences"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-sun"></i> <span>Light Mode</span>
+        </button>
     </nav>
 
-    <main>
-      <section id="about" class="fade-in">
-        <h2>About</h2>
-        <p>
-          I am a Computer Engineering student with a particular interest in electronic systems, software development, and hardware design.
-          Throughout my university education, I have developed basic projects using languages such as C, C#, and Java, as well as web technologies like HTML, CSS, and JavaScript.
-          My goal is to improve myself in the field of software and become a proficient software developer in the future. I am especially interested in enhancing my skills in back-end development, database management, and algorithm design.
-        </p>
-      </section>
+    <main class="content">
+        <section id="about" class="glass-card">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a Computer Engineering student at <strong>Karabük University</strong>. 
+                I have a strong interest in software development, web architecture, and electronic systems. 
+                Currently, I am focusing on back-end development and database management to build scalable applications.
+            </p>
+        </section>
 
-      <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <p><i class="fa-solid fa-envelope"></i> t.tanirahmet@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> +90 538 022 8010</p>
-        <p><i class="fa-solid fa-location-dot"></i> Karabük, Türkiye</p>
-      </section>
+        <section id="education" class="glass-card">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-item">
+                <h4>Computer Engineering</h4>
+                <p>Karabük University (3rd Year, 2nd Semester)</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Electronics Technology</h4>
+                <p>Sakarya University of Applied Sciences</p>
+            </div>
+        </section>
 
-      <section id="education" class="fade-in">
-        <h2>Education</h2>
-        <p><strong>Karabük Üniversitesi</strong> – Computer Engineering (Continuing)</p>
-        <p><strong>Sakarya Uygulamalı Bilimler Üniversitesi</strong> – Electronics Technology</p>
-      </section>
+        <section id="skills" class="glass-card">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C# / WPF</span>
+                <span class="skill-tag">PHP / SQL</span>
+                <span class="skill-tag">Arduino / Electronics</span>
+            </div>
+        </section>
 
-      <section id="skills" class="fade-in">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML, CSS, JavaScript, C, C#, WPF</li>
-          <li>My SQL, Firebase</li>
-          <li>Teamwork, problem solving, basic project management</li>
-        </ul>
-      </section>
+        <section id="projects" class="glass-card">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-box">
+                <h4><i class="fas fa-hotel"></i> Hotel Reservation System</h4>
+                <p>A web-based project using PHP and MySQL for room rentals and dashboard management.</p>
+            </div>
+            <div class="project-box">
+                <h4><i class="fas fa-home"></i> Smart Home Mini Project</h4>
+                <p>Automation prototype developed with Arduino-based sensors.</p>
+            </div>
+        </section>
 
-      <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <p><strong>Productivity Tracking System</strong><br>Software development that monitors production efficiency within the scope of the internship.</p>
-        <p><strong>Smart Home Mini Project</strong><br>Home automation prototype with Arduino-based sensors.</p>
-      </section>
+        <section id="experiences" class="glass-card">
+            <h2 class="section-title">Experience</h2>
+            <div class="exp-item">
+                <h4>Software Developer Intern - OFT Software</h4>
+                <ul>
+                    <li>Worked on productivity tracking systems for factories.</li>
+                    <li>Participated in software testing and team collaborations.</li>
+                </ul>
+            </div>
+        </section>
 
-      <section id="interests" class="fade-in">
-        <h2>Interests</h2>
-        <ul>
-          <li>Artificial intelligence and microchip design</li>
-        </ul>
-      </section>
+        <section id="contact" class="glass-card">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-details">
+                <p><i class="fas fa-envelope"></i> t.tanirahmet@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +90 538 022 8010</p>
+                <p><i class="fas fa-location-dot"></i> Karabük, Türkiye</p>
+            </div>
+            <form id="contactForm" class="modern-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <p id="formStatus"></p>
+        </section>
 
-      <section id="experiences" class="fade-in">
-        <h2>Experiences</h2>
-        <p><strong>Trainee Electronics Technician - MUSELLIMOGLU DEMIRCELIK (2020)</strong>
-        <ul>
-          <li>I helped with processes related to malfunction and maintenance of electronic circuit boards.</li>
-          <li>I took part in Arduino projects</li>
-        </ul>
-        <p><strong>Software Developer - OFT Software (2020 - 2021)</strong>
-          <ul>
-            <li>I took part in software testing processes with team work.</li>
-            <li>I took part in a software project being developed to measure productivity in factories.</li>
-          </ul>
-      </section>
-
-      <section id="iletisimformu" class="fade-in">
-        <h2>Contact form</h2>
-        <form id="iletisimForm">
-          <input type="text" placeholder="Name" required><br>
-          <input type="email" placeholder="Email" required><br>
-          <textarea placeholder="Your message" required></textarea><br>
-          <button type="submit">Send</button>
-        </form>
-        <p id="formSonuc"></p>
-      </section>
+        <footer class="footer">
+            <p>&copy; 2026 Ahmet Tanır | Student ID: 2110206077</p>
+        </footer>
     </main>
 
-    <footer class="fade-in">
-      <p>&copy; 2025 Ahmet Tanır</p>
-    </footer>
-  </div>
-
-  <script>
-    const btn = document.getElementById("theme-toggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      btn.textContent = document.body.classList.contains("light-mode")
-        ? "🌙 Dark Mode"
-        : "☀️ Bright Mode";
-    });
-
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-      });
-    });
-
-    document.getElementById("iletisimForm")?.addEventListener("submit", function(e) {
-      e.preventDefault();
-      document.getElementById("formSonuc").textContent = "Your message has been sent (I think)";
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
